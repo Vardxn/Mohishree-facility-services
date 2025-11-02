@@ -1,48 +1,111 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Sparkles, Building2, Factory, Leaf } from 'lucide-react';
+import { Home, Building2, Droplets, Sofa, Bath, Wind, Sparkles, Factory, GraduationCap, ShoppingBag, Briefcase, DoorClosed } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
   title: 'Our Services - Mohishree Facility Services',
-  description: 'Comprehensive facility management services including residential, commercial, industrial, and environmental solutions. Professional, reliable, and cost-effective.',
-  keywords: 'facility services, housekeeping, security, maintenance, pest control, landscaping, waste management',
+  description: 'Comprehensive residential and commercial facility management services in Aurangabad. From home deep cleaning to corporate housekeeping - your complete solution provider.',
+  keywords: 'residential cleaning, commercial housekeeping, water tank cleaning, sofa cleaning, corporate facility management, Aurangabad',
 };
 
 export default function ServicesPage() {
-  const serviceCategories = [
+  const residentialServices = [
     {
-      slug: 'residential',
-      title: 'Residential Services',
-      description: 'Comprehensive facility management solutions for residential complexes, apartments, and gated communities.',
-      icon: <Sparkles className="w-12 h-12" />,
-      services: ['Housekeeping', 'Security Services', 'Landscaping & Gardening', 'Pest Control', 'Waste Management'],
-      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop',
+      slug: 'full-home-cleaning',
+      title: 'Full Home Cleaning',
+      description: 'Complete home cleaning from kitchen to bedroom, leaving every corner spotless',
+      icon: <Home className="w-8 h-8" />,
     },
     {
-      slug: 'commercial',
-      title: 'Commercial Services',
-      description: 'Professional facility management for offices, retail spaces, hotels, and commercial establishments.',
-      icon: <Building2 className="w-12 h-12" />,
-      services: ['Office Cleaning', 'Security Management', 'Pantry Services', 'Façade Cleaning', 'Parking Management'],
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
+      slug: 'deep-cleaning',
+      title: 'Residential Deep Cleaning',
+      description: 'Intensive cleaning that eliminates deep-seated grime and prepares your home for special occasions',
+      icon: <Sparkles className="w-8 h-8" />,
     },
     {
-      slug: 'industrial',
-      title: 'Industrial Services',
-      description: 'Specialized facility management for manufacturing units, warehouses, and industrial facilities.',
-      icon: <Factory className="w-12 h-12" />,
-      services: ['Industrial Cleaning', 'Equipment Maintenance', 'Safety Management', 'Waste Disposal', 'Mechanical Services'],
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop',
+      slug: 'sofa-upholstery-cleaning',
+      title: 'Sofa & Upholstery Cleaning',
+      description: 'Professional fabric care that restores freshness and extends furniture life',
+      icon: <Sofa className="w-8 h-8" />,
     },
     {
-      slug: 'environmental',
-      title: 'Environmental Services',
-      description: 'Eco-friendly facility management solutions focused on sustainability and environmental compliance.',
-      icon: <Leaf className="w-12 h-12" />,
-      services: ['Waste Segregation', 'Recycling Programs', 'Green Cleaning', 'Water Conservation', 'Energy Efficiency'],
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop',
+      slug: 'bathroom-toilet-cleaning',
+      title: 'Bathroom & Toilet Cleaning',
+      description: 'Hygienic sanitization with eco-friendly products for a sparkling clean bathroom',
+      icon: <Bath className="w-8 h-8" />,
+    },
+    {
+      slug: 'water-tank-cleaning',
+      title: 'Water Tank Cleaning',
+      description: 'Essential health service removing harmful sediment and contaminants from your water supply',
+      icon: <Droplets className="w-8 h-8" />,
+    },
+    {
+      slug: 'chimney-cleaning',
+      title: 'Chimney Cleaning',
+      description: 'Professional degreasing and maintenance for safer, more efficient kitchen chimneys',
+      icon: <Wind className="w-8 h-8" />,
+    },
+  ];
+
+  const commercialServices = [
+    {
+      slug: 'corporate-housekeeping',
+      title: 'Corporate Housekeeping Services',
+      description: 'Comprehensive daily maintenance for professional business environments',
+      icon: <Building2 className="w-8 h-8" />,
+    },
+    {
+      slug: 'office-cleaning',
+      title: 'Office Cleaning Services',
+      description: 'Creating clean, productive workspaces with flexible scheduling',
+      icon: <Briefcase className="w-8 h-8" />,
+    },
+    {
+      slug: 'facility-management',
+      title: 'Comprehensive Facility Management',
+      description: 'End-to-end facility solutions including maintenance, security, and operations',
+      icon: <Factory className="w-8 h-8" />,
+    },
+  ];
+
+  const industrySolutions = [
+    {
+      slug: 'shopping-malls',
+      title: 'Shopping Mall Cleaning',
+      description: 'High-traffic retail space maintenance with after-hours scheduling',
+      icon: <ShoppingBag className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&h=400&fit=crop',
+    },
+    {
+      slug: 'educational-institutions',
+      title: 'Educational Institutions',
+      description: 'Safe, non-toxic cleaning for colleges and schools with flexible timing',
+      icon: <GraduationCap className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop',
+    },
+    {
+      slug: 'corporate-offices',
+      title: 'Corporate Office Solutions',
+      description: 'Professional workspace hygiene with confidentiality and efficiency',
+      icon: <Building2 className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop',
+    },
+    {
+      slug: 'factories',
+      title: 'Factory & Industrial',
+      description: 'Specialized technical cleaning for manufacturing and production facilities',
+      icon: <Factory className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+    },
+    {
+      slug: 'atm-cleaning',
+      title: 'ATM Cleaning Services',
+      description: 'Secure, professional cleaning for banking kiosks and ATM installations',
+      icon: <DoorClosed className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
     },
   ];
 
@@ -53,52 +116,132 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 font-heading">
-              Our Services
+              Complete Facility Solutions
             </h1>
             <p className="text-xl lg:text-2xl opacity-90">
-              Comprehensive facility management solutions tailored to your needs
+              From Residential Homes to Corporate Offices - Your One-Stop Service Partner
+            </p>
+            <p className="text-lg mt-4 opacity-85">
+              Consolidating excellence across all cleaning and facility management needs
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Residential Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-text-primary mb-4 font-heading">
+              🏠 Residential Services
+            </h2>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+              Comprehensive cleaning solutions for homeowners, tenants, and residential societies
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {residentialServices.map((service) => (
+              <Link key={service.slug} href={`/services/residential/${service.slug}`}>
+                <Card className="h-full hover:shadow-card-hover transition-all duration-300 cursor-pointer group">
+                  <CardHeader>
+                    <div className="mb-4 text-primary group-hover:scale-110 transition-transform">
+                      {service.icon}
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription>{service.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-sm text-primary font-semibold">
+                      Learn More →
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Commercial Services Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {serviceCategories.map((category) => (
-              <Card key={category.slug} className="overflow-hidden hover:shadow-card-hover transition-shadow">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    {category.icon}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-text-primary mb-4 font-heading">
+              🏢 Commercial & Corporate Services
+            </h2>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+              Professional facility management for business environments - reliability, efficiency, and professional image
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {commercialServices.map((service) => (
+              <Link key={service.slug} href={`/services/commercial/${service.slug}`}>
+                <Card className="h-full hover:shadow-card-hover transition-all duration-300 cursor-pointer group">
+                  <CardHeader>
+                    <div className="mb-4 text-primary group-hover:scale-110 transition-transform">
+                      {service.icon}
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription>{service.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-sm text-primary font-semibold">
+                      Learn More →
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry-Specific Solutions Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-text-primary mb-4 font-heading">
+              Solutions for Your Industry
+            </h2>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+              Tailored facility services addressing the unique challenges of your specific sector
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {industrySolutions.map((solution) => (
+              <Link key={solution.slug} href={`/services/industries/${solution.slug}`}>
+                <Card className="overflow-hidden hover:shadow-card-hover transition-all duration-300 cursor-pointer group">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={solution.image}
+                      alt={solution.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-white">
+                      {solution.icon}
+                    </div>
                   </div>
-                </div>
-                <CardHeader>
-                  <CardTitle>{category.title}</CardTitle>
-                  <CardDescription>{category.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-6">
-                    {category.services.map((service, index) => (
-                      <li key={index} className="flex items-center text-sm text-text-secondary">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={`/services/${category.slug}`}>
-                    <Button variant="primary" className="w-full">
-                      Learn More
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {solution.title}
+                    </CardTitle>
+                    <CardDescription>{solution.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-sm text-primary font-semibold">
+                      Explore Solutions →
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

@@ -116,7 +116,7 @@ export default function WindowCleaningPage() {
                 Get Free Quote
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10">
-                Call: +91-XXXXXXXXXX
+                Call: +91 94236 79285
               </Button>
             </div>
           </div>

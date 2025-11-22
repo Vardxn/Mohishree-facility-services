@@ -85,13 +85,12 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center py-16 sm:py-24 md:py-32 lg:py-40"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 87, 184, 0.8), rgba(0, 87, 184, 0.9)), url(https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&h=1080&fit=crop)',
-        }}
-      >
-        <div className="container mx-auto px-4">
+      <section className="relative py-16 sm:py-24 md:py-32 lg:py-40 overflow-hidden">
+        {/* Logo Background (20% opacity) */}
+        <div className="absolute inset-0 bg-white bg-center bg-no-repeat" aria-hidden="true">
+          <div className="w-full h-full bg-[url('/images/mohishree-logo.jpg')] bg-center bg-contain bg-no-repeat opacity-20" />
+        </div>
+        <div className="relative container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 font-heading leading-tight">
               Eco-Friendly, Reliable, Professional Facility Services

@@ -91,14 +91,14 @@ export default function HomePage() {
           <div className="w-full h-full bg-[url('/images/mohishree-logo.jpg')] bg-center bg-contain bg-no-repeat opacity-20" />
         </div>
         <div className="relative container mx-auto px-4 z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 font-heading leading-tight">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 font-heading leading-tight">
               Eco-Friendly, Reliable, Professional Facility Services
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 opacity-90">
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4">
               Established 2019 • 6 Years of Excellence • 4.4★ Rated
             </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 opacity-85 px-4">
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 px-4">
               From home deep cleaning to industrial solutions—your trusted partner for clean, safe, healthy environments in Sambhajinagar
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 px-4">
@@ -116,17 +116,17 @@ export default function HomePage() {
             
             {/* Trust Indicators */}
             <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto px-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-5">
+              <div className="bg-white/70 border border-gray-200 rounded-lg p-4 sm:p-5 shadow-sm">
                 <div className="text-2xl sm:text-3xl font-bold text-accent">🌿</div>
-                <div className="text-xs sm:text-sm font-semibold mt-2">Eco-Friendly Products</div>
+                <div className="text-xs sm:text-sm font-semibold mt-2 text-gray-700">Eco-Friendly Products</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-5">
+              <div className="bg-white/70 border border-gray-200 rounded-lg p-4 sm:p-5 shadow-sm">
                 <div className="text-2xl sm:text-3xl font-bold text-accent">⚡</div>
-                <div className="text-xs sm:text-sm font-semibold mt-2">3-4 Hour Response Time</div>
+                <div className="text-xs sm:text-sm font-semibold mt-2 text-gray-700">3-4 Hour Response Time</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-5">
+              <div className="bg-white/70 border border-gray-200 rounded-lg p-4 sm:p-5 shadow-sm">
                 <div className="text-2xl sm:text-3xl font-bold text-accent">🏆</div>
-                <div className="text-xs sm:text-sm font-semibold mt-2">Trusted by 100+ Clients</div>
+                <div className="text-xs sm:text-sm font-semibold mt-2 text-gray-700">Trusted by 100+ Clients</div>
               </div>
             </div>
           </div>

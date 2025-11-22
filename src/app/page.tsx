@@ -103,7 +103,7 @@ export default function HomePage() {
               From home deep cleaning to industrial solutions—your trusted partner for clean, safe, healthy environments in Sambhajinagar
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 px-4">
-              <Link href="/get-a-quote" className="w-full sm:w-auto">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button variant="accent" size="lg" className="w-full sm:w-auto text-base sm:text-lg md:text-xl px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6">
                   Get a Free Assessment
                 </Button>
@@ -332,7 +332,7 @@ export default function HomePage() {
                   className="bg-white text-primary hover:bg-gray-100 text-base sm:text-lg md:text-xl px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6"
                   asChild
                 >
-                  <Link href="/get-a-quote">
+                  <Link href="/contact">
                     Get Free Quote
                   </Link>
                 </Button>
@@ -430,7 +430,7 @@ export default function HomePage() {
           <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto opacity-90 px-4">
             Get a free site assessment and customized quote for your facility
           </p>
-          <Link href="/get-a-quote" className="inline-block w-full sm:w-auto px-4">
+          <Link href="/contact" className="inline-block w-full sm:w-auto px-4">
             <Button variant="accent" size="lg" className="w-full sm:w-auto text-base sm:text-lg md:text-xl px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6">
               Request a Free Quote
             </Button>

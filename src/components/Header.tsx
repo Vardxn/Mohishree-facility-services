@@ -15,7 +15,6 @@ export default function Header() {
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -65,18 +64,12 @@ export default function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
-            <Link href="/customer/dashboard" className="text-gray-700 hover:text-blue-600 font-medium text-sm whitespace-nowrap">
-              My Account
-            </Link>
             <a href="tel:+919423679285" className="hidden xl:flex items-center space-x-2 text-gray-700 hover:text-blue-600">
               <Phone className="w-4 h-4" />
               <span className="font-medium text-sm whitespace-nowrap">+91 94236 79285</span>
             </a>
             <Link href="/booking" className="bg-green-500 text-white px-4 xl:px-6 py-2 rounded-lg hover:bg-green-600 font-semibold text-sm whitespace-nowrap">
               Book Now
-            </Link>
-            <Link href="/get-a-quote" className="bg-yellow-400 text-gray-900 px-4 xl:px-6 py-2 rounded-lg hover:bg-yellow-500 font-semibold text-sm whitespace-nowrap">
-              Get Quote
             </Link>
           </div>
 
@@ -113,14 +106,6 @@ export default function Header() {
 
             {/* Mobile Actions */}
             <div className="pt-4 border-t space-y-2">
-              <Link 
-                href="/customer/dashboard" 
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-3 px-4 text-gray-700 hover:bg-gray-50 rounded-lg font-medium active:bg-gray-100"
-              >
-                My Account
-              </Link>
-              
               <a 
                 href="tel:+919423679285" 
                 className="flex items-center space-x-3 py-3 px-4 text-gray-700 hover:bg-gray-50 rounded-lg active:bg-gray-100"
@@ -135,14 +120,6 @@ export default function Header() {
                 className="block bg-green-500 text-white text-center px-4 py-3 rounded-lg hover:bg-green-600 font-semibold active:bg-green-700"
               >
                 Book Now
-              </Link>
-              
-              <Link 
-                href="/get-a-quote" 
-                onClick={() => setIsMenuOpen(false)}
-                className="block bg-yellow-400 text-gray-900 text-center px-4 py-3 rounded-lg hover:bg-yellow-500 font-semibold active:bg-yellow-600"
-              >
-                Get a Quote
               </Link>
             </div>
           </nav>

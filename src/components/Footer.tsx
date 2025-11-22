@@ -13,7 +13,7 @@ export default function Footer() {
     { label: 'About Us', href: '/about' },
     { label: 'Services', href: '/services' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Get a Quote', href: '/get-a-quote' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const services = [
